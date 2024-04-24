@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "4406d425-fe8c-4bc3-a828-ca29e5de42c4",
+		"name": "nest_auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28333513"
+	},
+	"item": [
+		{
+			"name": "NestJs API",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"first_name\": \"Teste\",\r\n    \"last_name\":\"1\",\r\n    \"email\":\"teste@tt.com\",\r\n    \"password\":\"666\",\r\n\t\"password_confirm\":\"666\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"teste@tt.com\",\r\n    \"password\":\"suacu\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/login"
+							},
+							"response": []
+						},
+						{
+							"name": "User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8000/api/user"
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "http://localhost:8000/api/logout"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Reset",
+					"item": [
+						{
+							"name": "Forgot",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"email\":\"teste@tt.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/forgot"
+							},
+							"response": []
+						},
+						{
+							"name": "Reset",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"token\": \"6o5klec1fim7\",\r\n\t\"password\": \"suacu\",\r\n\t\"password_confirm\": \"suacu\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8000/api/reset"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
